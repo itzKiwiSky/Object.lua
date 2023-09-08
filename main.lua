@@ -37,4 +37,5 @@ end
 
 function love.update(elapsed)
     animatedObject:update(elapsed)
+    staticobj:update()
 end

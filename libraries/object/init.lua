@@ -2,7 +2,11 @@ PATH = ...
 
 json = require(PATH .. ".json")
 
-local object = {}
+local object = {
+    _VERSION        = "Object 0.0.1",
+    _AUTHOR         = "StrawberryChocolate",
+    _URL            = "https://github.com/Doge2Dev/Object.lua",
+}
 object.__index = object
 
 --% Object instance %--
@@ -134,7 +138,6 @@ function object:draw()
 end
 
 function object:update(elapsed)
-    self:updateHitbox()
     if #self.meta.quads > 0 then
         if self.animation.animationPlaying then
             self.meta.animationTimer = self.meta.animationTimer + 1
